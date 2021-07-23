@@ -6,16 +6,15 @@ const login = (props) => {
     return (
         <View style={styles.container}>
             <Image style={styles.image} source={require('./Geotrash.png')}/>
-            <Input containerStyle={styles.input} type="text" placeholder="Email"/>
-            <Input containerStyle={styles.input} type="text" placeholder="Password"/>
+            <Input containerStyle={styles.input} type="text" name='email' placeholder="Email"/>
+            <Input containerStyle={styles.input} type="text" name='password' placeholder="Password"/>
             <Button 
            title="connexion"
            color='rgba(44, 110, 73, 100)'
            onPress={() => props.navigation.navigate('BottomNavigator', {screen: 'home'})}
             />   
-            <View style={styles.text}>
-                <Text>Vous n'avez pas de compte, Créer un compte</Text> 
-            </View>
+            
+                <Text>Vous n'avez pas de compte,  <Text style={{color:'#2c6e49'}}onPress={() =>props.navigation.navigate('signup')}>Créer un compte</Text></Text>
         </View>
          
     );
@@ -23,18 +22,17 @@ const login = (props) => {
 
 const styles = StyleSheet.create({
     image:{
-        width: 350,
-        resizeMode: 'contain'
-        
+        width: '100%',
+        resizeMode: 'contain',
     },
     text:{
-        marginTop: 50,
+        marginTop: 1,
         alignItems: 'flex-end',
         justifyContent: 'flex-end'
     },
     input:{
         backgroundColor:'rgba(44, 110, 73, 0.4)',
-        marginBottom: 25, 
+        margin: 10,
         width:'80%',
         borderRadius: 15,
     },
