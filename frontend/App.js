@@ -9,6 +9,7 @@ import parcourchoix from './screens/parcourchoix';
 import trajetparcour from './screens/trajetparcour';
 import mapscreen from './screens/mapscreen';
 import homescreen from './screens/homescreen';
+import signup from './screens/signup'
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -28,6 +29,7 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator screenOptions={{headerShown: false}}>
         <Stack.Screen name="login" component={login} />
+        <Stack.Screen name="signup" component={signup} />
         <Stack.Screen name="BottomNavigator" component={BottomNavigator} />
       </Stack.Navigator>
   </NavigationContainer>

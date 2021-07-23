@@ -14,9 +14,7 @@ const login = (props) => {
            onPress={() => props.navigation.navigate('BottomNavigator', {screen: 'home'})}
             />   
             
-                <Text>Vous n'avez pas de compte,  <Text style={{color:'#2c6e49'}}onPress={() =>{console.log("click ok")}}>Créer un compte</Text></Text>
-                
-            
+                <Text>Vous n'avez pas de compte,  <Text style={{color:'#2c6e49'}}onPress={() =>props.navigation.navigate('signup')}>Créer un compte</Text></Text>
         </View>
          
     );
